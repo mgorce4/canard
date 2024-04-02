@@ -1,24 +1,31 @@
 package canard.model;
 
 import canard.model.cancan.Cancan;
-import canard.model.vol.VolerAvecDesAiles;
+import canard.model.vol.ComportementVol;
+import canard.model.vol.NePasVoler;
+import canard.model.vol.PropulsionAReaction;
 
-public class PrototypeCanard extends Canard{
+public class PrototypeCanard extends Canard {
 
-	public PrototypeCanard(String nom) {
-        super(nom, new VolerAvecDesAiles(), new Cancan());
+    private ComportementVol comportementVol;
+
+    public PrototypeCanard(String nom, boolean vole) {
+        super(nom, vole ? new PropulsionAReaction() : new NePasVoler(), new Cancan());
+        this.comportementVol = vole ? new PropulsionAReaction() : new NePasVoler();
     }
 
-	@Override
-	public String nager() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public String nager() {
+        return null;
+    }
 
-	@Override
-	public String afficher() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public String afficher() {
+        return "Je suis un prototype de canard";
+    }
+
+    public ComportementVol getComportementVol() {
+        return comportementVol;
+    }
 
 }
