@@ -6,7 +6,7 @@ import canard.model.vol.ComportementVol;
 public abstract class Canard {
 
     protected String nom;
-    protected ComportementVol comportementVol;
+    private ComportementVol comportementVol;
 	private ComportementCancan comportementCancan;
 
     public Canard(String nom, ComportementVol comportementVol, ComportementCancan comportementCancan) {

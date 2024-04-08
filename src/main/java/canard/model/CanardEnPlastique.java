@@ -11,7 +11,7 @@ public class CanardEnPlastique extends Canard {
 
     @Override
     public String nager() {
-        return "Tous les canards flottent, même les leurres";
+        return "Tous les canards flottent, même les leurres!";
     }
 
     @Override
